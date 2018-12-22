@@ -1,4 +1,4 @@
-# test1
+# Vuex
 
 > A Vue.js project
 
