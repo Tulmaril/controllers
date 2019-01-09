@@ -26,7 +26,6 @@ const store = new Vuex.Store({
         ],
     },
     mutations: {
-      updateField,
       closeController(state, index) {
         state.controllers[index].opened = false;
       },
