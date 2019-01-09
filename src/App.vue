@@ -25,18 +25,18 @@ export default {
           label: "Контролл 1",
           id: 1,
           command: 'Сумма',
-          type: 'sum'
+          type: 'sum',
         },
         {
           label: "Контролл 2",
           id: 2,
           command: 'Константа',
-          type: 'lead'
+          type: 'lead',
         },
         {
           label: "Контролл 3",
           id: 3,
-          type: 'dependent'
+          type: 'dependent',
         }
       ],
     };

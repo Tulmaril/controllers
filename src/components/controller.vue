@@ -10,7 +10,7 @@
         <span>{{$store.state.controllers[index].value | numbers}}</span>
       </div>
       <input
-        v-model="contr"
+        v-model="value"
         type="number"
         min="0"
         ref="controll"
