@@ -7,41 +7,35 @@ const store = new Vuex.Store({
     strict: true,
     state: {
         constant: 1000,
-        contoller0: 0,
-        contoller1: 0,
-        contoller2: 0,
-        contoller0Opened: false,
-        contoller1Opened: false,
-        contoller2Opened: false,
+        controllers: [
+          {
+            value: 0,
+            opened: false,
+            map: 'controllers[0].value'
+          },
+          {
+            value: 0,
+            opened: false,
+            map: 'controllers[1].value'
+          },
+          {
+            value: 0,
+            opened: false,
+            map: 'controllers[2].value'
+          },
+        ],
     },
     mutations: {
-      closeController0(state) {
-        state.contoller0Opened = false;
+      updateField,
+      closeController(state, index) {
+        state.controllers[index].opened = false;
       },
-      openController0(state) {
-        state.contoller0Opened = true;
+      openController(state, index) {
+        state.controllers[index].opened = true;
       },
-      changeController0(state, value) {
-        state.contoller0 = value;
-      },
-      closeController1(state) {
-        state.contoller1Opened = false;
-      },
-      openController1(state) {
-        state.contoller1Opened = true;
-      },
-      changeController1(state, value) {
-        state.contoller1 = value;
-      },
-      closeController2(state) {
-        state.contoller2Opened = false;
-      },
-      openController2(state) {
-        state.contoller2Opened = true;
-      },
-      changeController2(state, value) {
-        state.contoller2 = value;
-      },
+      changeController(state, payload) {
+        state.controllers[payload.index].value = payload['value'];
+      }
     }
 });
 
