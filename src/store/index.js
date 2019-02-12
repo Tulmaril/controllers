@@ -32,35 +32,6 @@ const store = new Vuex.Store({
       changeController(state, payload) {
         state.controllers[payload.index].value = payload['value'];
       },
-
-
-      closeController1(state) {
-        state.controller1Opened = false;
-      },
-      openController1(state) {
-        state.controller1Opened = true;
-      },
-      changeController1(state, value) {
-        state.controller1 = value;
-      },
-      closeController2(state) {
-        state.controller2Opened = false;
-      },
-      openController2(state) {
-        state.controller2Opened = true;
-      },
-      changeController2(state, value) {
-        state.controller2 = value;
-      },
-      closeController3(state) {
-        state.controller3Opened = false;
-      },
-      openController3(state) {
-        state.controller3Opened = true;
-      },
-      changeController3(state, value) {
-        state.controller3 = value;
-      },
     }
 });
 
